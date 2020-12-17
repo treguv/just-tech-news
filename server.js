@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // turn on connection to db and server
+//force true means it will drop all the tables after every run
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
