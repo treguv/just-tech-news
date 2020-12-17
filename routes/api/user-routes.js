@@ -50,6 +50,37 @@ router.post("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+//login route
+router.post("/login", (req, res) => {
+  // post methods are standard for login procedures
+  //query operations
+  User.findOne({
+    where: {
+      email: req.body.email,
+    },
+  }).then((dbUserData) => {
+    if (!dbUserData) {
+      res
+        .status(400)
+        .json({ message: "No user found with that email address!" });
+      return; // no user found and break
+    }
+    //This route would just return user data
+    //res.json({ user: dbUserData });
+
+    //verify the user
+    //check if the password is correct
+    //dbUserData is an instance of user
+    const validPassword = dbUserData.checkPassword(req.body.password);
+
+    //procede based on results
+    if (!validPassword) {
+      res.status(400).json({ message: "Incorrect Password!" });
+      return;
+    }
+    res.json({ user: dbUserData, message: "You are now logged in!" });
+  });
+});
 
 // PUT /api/users/1
 router.put("/:id", (req, res) => {
