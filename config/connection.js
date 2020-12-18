@@ -1,6 +1,6 @@
 //import sequelize
 const Sequelize = require("sequelize");
-const { sequelize } = require("../models/Comment");
+//const { sequelize } = require("../models/Comment");
 
 require("dotenv").config(); // For loading env variables
 //create the connection to the database
