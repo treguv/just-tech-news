@@ -1,0 +1,121 @@
+<!-- About me -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 id="about-me-header" class="text-center general-padding">
+            About Me
+          </h3>
+        </div>
+        <div class="col-sm-12">
+          <p class="text-center lead general-padding">
+            Hi. My name is Vlad. I am a junior student at University of
+            Washington Tacoma studying Computer Science and Systems. I am also
+            taking part in a Full-Stack Web Development bootcamp at University
+            of Berkely California studying the MERN stack. Below you can find
+            examples of my work.
+          </p>
+        </div>
+      </div>
+      <!-- Cards with work -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 id="about-me-header" class="text-center general-padding">
+            My Work
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 card-margin">
+          <!-- Fly High -->
+          <div
+            class="card h-100 mx-auto my-2 shadow-sm"
+            style="width: 18rem"
+            id="fly-high"
+          >
+            <img
+              class="card-img-top"
+              src="./assets/img/fly-high.jpg"
+              alt="Kite on black background"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-center">Fly High</h3>
+              <p class="text-center card-text">
+                Html / Bulma / jQuery / External API's
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 card-margin">
+          <!-- PDF Highlight Combiner -->
+          <div
+            class="card h-100 mx-auto my-2 shadow-sm"
+            style="width: 18rem"
+            id="pdf-highlight"
+          >
+            <img
+              class="card-img-top"
+              src="./assets/img/pdf-highlight.png"
+              alt="Highlighted PDF"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-center">PDF Highlight Combiner</h3>
+              <!-- <p class="text-center card-text">Dubhacks 2020</p> -->
+              <p class="text-center card-text">Java / PDFBox / PDFClown</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 card-margin">
+          <!-- Note Taker -->
+          <div
+            class="card h-100 mx-auto my-2 shadow-sm"
+            style="width: 18rem"
+            id="note-taker"
+          >
+            <img
+              class="card-img-top"
+              src="./assets/img/notepad-img.png"
+              alt="notepad"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-center">Note Taker</h3>
+              <p class="text-center card-text">
+                Node.js / Express.js / JavaScript / HTML / CSS
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 card-margin">
+          <!-- Weather Dashboard -->
+          <div
+            class="card h-100 mx-auto my-2 shadow-sm"
+            style="width: 18rem"
+            id="weather-dashboard"
+          >
+            <img
+              class="card-img-top"
+              src="./assets/img/weather-dashboard.jpg"
+              alt="Sun on blue background"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-center">Weather Dashboard</h3>
+              <p class="text-center card-text">
+                Html / Bootstrap / Javascript / jQuery / External API
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 card-margin ">
+          <!-- Run Buddy -->
+          <div class="card h-100 mx-auto my-2" style="width: 18rem" id="run-buddy">
+            <img
+              class="card-img-top shadow-sm"
+              src="./assets/img/run-buddy.jpg"
+              alt="Run Buddy"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-center">Run Buddy</h3>
+              <p class="text-center card-text">Html / CSS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -21,3 +21,6 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
+
+
+mysqldump -uroot -p$UIOUFEIRE occ > ~/occ.sql
