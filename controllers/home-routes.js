@@ -4,6 +4,8 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
+  console.log("logging session");
+  console.log(req.session);
   Post.findAll({
     attributes: [
       "id",
@@ -43,7 +45,16 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
-
+router.get("/login", (req, res) => {
+  //Use session to check if the user is logged in
+  console.log("is logged in?", req.session.loggedIn);
+  if (req.session.loggedIn) {
+    //if logged in redirect
+    res.redirect("/");
+    return;
+  }
+  res.render("login"); // this login corresponds to the login.handlebars file
+});
 // router.get("/", (req, res) => {
 //   res.render("homepage", {
 //     id: 1,
