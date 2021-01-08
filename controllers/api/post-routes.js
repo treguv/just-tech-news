@@ -110,13 +110,19 @@ router.post("/", (req, res) => {
 
 //update votes on a post
 router.put("/upvote", (req, res) => {
-  // custom method in Post.js model
-  Post.upvote(req.body, { Vote })
-    .then((updatedPostData) => res.json(updatedPostData))
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
-    });
+  //Make sure the session exists
+  if (req.session) {
+    // pass session id along with all destructured properties on req.body
+    Post.upvote(
+      { ...req.body, user_id: req.session.user_id },
+      { Vote, Comment, User }
+    )
+      .then((updatedVoteData) => res.json(updatedVoteData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  }
 });
 
 //update the title of the post
