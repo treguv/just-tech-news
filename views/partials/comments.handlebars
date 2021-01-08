@@ -1,0 +1,15 @@
+{{!-- Show all previous comments --}}
+<div class="comments">
+    {{!-- Have to swap post.comments for this bc post.comments doesnt exist in this space --}}
+    {{#each this}}
+    <section class="comment">
+        <div class="meta">
+            {{!-- Here we use our helper functions --}}
+            {{user.username}} on {{created_at}}
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}} {{!--Close the each loop--}}
+</div>
